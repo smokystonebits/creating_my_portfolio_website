@@ -1,2 +1,2 @@
-# practiceportfoliocode
-practicing HTML/CSS/JavaScript coding my portfolio website - take 1 
+# Creating my portfolio website 
+This repository is going to be the process of creating my portfolio website. I'm also using this project for my final in Web Development course at University of Minnesota. 
