@@ -1,0 +1,209 @@
+body {
+    line-height: 1.6; /* without metric, multiplier of current font size */
+    background-color: #ffffff;
+    background-position: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header, main, footer (1fr is 1 fraction) */
+    gap: 0px; /* spacing between grid items */
+    overflow: hidden; /* prevent scrolling on desktop */
+    min-height: 100vh;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow: auto; /* enable scrolling when width is smaller than 768px */
+    }
+}
+
+/*---------------------------------------------------------------------*/
+/*starts the header section */
+header {
+    padding: 0%; /*padding around grid item*/
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 4px dashed #000000;
+    margin-top: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    align-items: center; /* centers items vertically in section */
+    display: flex; 
+    justify-content: space-between; /* space between divs */
+}
+
+nav { /*navigation links in header*/
+    text-align: right;
+    text-transform: lowercase;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.nav:hover {
+    background-color: #000000; 
+}
+
+#home-button {  /*home button in nav */
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+#home-button:hover {
+    background-color: #000000;
+}
+
+#contact-form {
+    display: none; /* keeps contact form hidden before clicking contact button */
+}
+
+#show-contact-form {  /*contact button in nav */
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+#show-contact-form:hover {
+    background-color: #000000;
+}
+
+#toggle-colors {  /*sun icon to toggle between light/dark mode in nav */
+    border: none;
+    background-color: transparent;
+    font-size: larger;
+}
+
+.logo {  /* logo top left in heading */
+    padding: 0px 0px 0px 30px;
+    max-width: 400px;
+    text-align: left;
+}
+/*-----------------------------------------------------------------------*/
+
+
+a { /*general all links */
+    color: #000000;
+    text-decoration: none;
+    padding-inline: 5px;
+}
+
+h3 { /* about me & jasmine is my life titles / section titles */
+    font-style: bold;
+    font-size: calc(1.2rem + 0.5vw); 
+    margin: 4px;
+}
+
+h2 { /*logo top left & page titles */
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4cqw;
+    margin: 4px;
+}
+
+p { /*general all paragraphs */
+    font-size: 0.7;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ---------------------------------------------------------------*/
+
+/*starts the about me row aka main section*/
+main {
+    background: url("beethatIdrew.png") no-repeat; 
+    background-color: #ffffff;
+    background-size: 100px; /* changes size of the bee */
+    background-position: center; /* changes position of the bee */
+    align-content: center; /*aligns elements vertically*/
+}
+
+.text-content, .traits-text {  /*about me section */
+    align-items: center; /* centers items vertically in section */
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* centers items horizontally */
+    text-align: left;
+    padding: 5px 5px 5px 60px; /*top right bottom left*/
+    background-color: transparent;
+}
+
+
+/* ---------------------------------------------------------------*/
+/*starts the footer section */
+footer {
+    font-size: 0.9em;
+    border-top: 4px dashed #000000;
+    background-color: #ffffff;
+    margin-bottom: -10px; 
+    margin-left: -10px;
+    margin-right: -10px;
+    align-items: center; /* centers items vertically in section */
+}
+
+
+footer .contact {  /*settings for the social icons */
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px 10px 30px;
+}
+
+
+.footer { /*entire footer div that includes separate author & socials divs */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: right;
+}
+
+
+/*---------------------------------------------------------------------*/
+/* invert colors css from the js */
+.invert-colors {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/*two objects below are for transition js of the about & traits sections*/
+.hidden {
+    opacity: 0;
+    transform: translateY(20px); /* slightly moves down */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* slowly transition */
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0); /* resets to original position */
+}
+
+
+/*---------------------------------------------------------*/
+/*starts contact form css */
+
+#contact-form {
+    padding-left: 30px;
+    max-width: 200px;
+}
+
+#submit {
+    border: 1px solid #ff0099;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#submit:hover {
+    background-color: #000000;
+}
+
+#message {
+    border: 2px solid #ff0099;
+}
+
+#email {
+    border: 2px solid #ff0099;
+}
+
+#name {
+    border: 2px solid #ff0099;
+}
